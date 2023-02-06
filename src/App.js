@@ -11,8 +11,11 @@ const App = () => {
         data ? JSON.parse(data) : []
     );
 
+    //entradas
     const [income, setIncome] = useState(0);
+    //saidas
     const [expense, setExpense] = useState(0);
+    //total
     const [total, setTotal] = useState(0);
 
     useEffect(() => {

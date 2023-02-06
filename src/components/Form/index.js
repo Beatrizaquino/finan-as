@@ -8,7 +8,8 @@ const Form = ({ handleAdd }) => {
     const [amount, SetAmount] = useState("");
     const [isExpense, setExpense] = useState(false);
 
-    const gereteID = () => Math.round(Math.round(Math.random) * 1000);
+    //gerando id aleatório 
+    const generateID = () => Math.round(Math.round(Math.random) * 1000);
 
     const handleSave = () => {
 
@@ -21,7 +22,7 @@ const Form = ({ handleAdd }) => {
         }
 
         const transaction = {
-            id: gereteID(),
+            id: generateID(),
             desc: desc,
             amount: amount,
             expense: isExpense
@@ -66,7 +67,7 @@ const Form = ({ handleAdd }) => {
                 />
                 <C.Label htmlFor="rExpense">Saida</C.Label>
             </C.RadioGroup>
-            <C.Button onClick={handleSave}>ADICIONAR</C.Button>
+            <C.Button onClick={handleAdd}>ADICIONAR</C.Button>
         </C.Conteiner>
             
         </>
